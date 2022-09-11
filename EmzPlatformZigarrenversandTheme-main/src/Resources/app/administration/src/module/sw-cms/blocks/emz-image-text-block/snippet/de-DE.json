@@ -1,0 +1,9 @@
+{
+    "sw-cms": {
+        "blocks": {
+            "emz-image-text-block": {
+                "label": "Text Bild Block"
+            }
+        }
+    }
+}

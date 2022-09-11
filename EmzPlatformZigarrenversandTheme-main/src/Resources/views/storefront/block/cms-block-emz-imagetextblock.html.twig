@@ -1,0 +1,31 @@
+{% block block_emzimagetextblock %}
+    {% set element = block.slots.getSlot('left-image') %}
+    {% set element = block.slots.getSlot('left-text') %}
+    {% set element = block.slots.getSlot('right-image') %}
+    {% set element = block.slots.getSlot('right-text') %}
+    
+
+    <div class="col-12" data-cms-element-id="{{ element.id }}">
+        {% block block_emzimagetextblock_inner_left_image %}
+            {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+        {% endblock %}
+    </div>
+
+     <div class="col-12" data-cms-element-id="{{ element.id }}">
+        {% block block_emzimagetextblock_inner_left_text %}
+            {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+        {% endblock %}
+    </div>
+
+     <div class="col-12" data-cms-element-id="{{ element.id }}">
+        {% block block_emzimagetextblock_inner_right_image %}
+            {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+        {% endblock %}
+    </div>
+
+     <div class="col-12" data-cms-element-id="{{ element.id }}">
+        {% block block_emzimagetextblock_inner_right_text %}
+            {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+        {% endblock %}
+    </div>
+{% endblock %}

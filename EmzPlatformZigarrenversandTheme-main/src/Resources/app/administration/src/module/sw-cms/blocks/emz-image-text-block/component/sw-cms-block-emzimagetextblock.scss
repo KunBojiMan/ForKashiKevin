@@ -1,0 +1,20 @@
+.sw-cms-block-emzimagetextblock-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+    align-content: stretch;
+    align-items: start;
+    grid-gap: 40px;
+
+    .sw-cms-el-emztextelement {
+        padding: 20px;
+    }
+
+    .sw-cms-el-emzimageelement.is--cover {
+        min-height: 200px;
+    }
+
+    .sw-cms-block-image-text-gallery__left,
+    .sw-cms-block-image-text-gallery__right {
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 20%);
+    }
+}

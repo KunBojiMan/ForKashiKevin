@@ -1,0 +1,34 @@
+{% block element_emzimageelement %}
+    {% set config = element.fieldConfig.elements %}
+
+    {% set mediaIds = [] %}
+
+    {% if config.media.value %}
+        {% set mediaIds = mediaIds|merge([config.media.value]) %}
+    {% endif %}
+
+    {% if mediaIds %}
+        {% set mediaCollection = searchMedia(mediaIds, context.context) %}
+    {% endif %}
+
+    {% if config.media.value %}
+        {% set image = mediaCollection.get(config.media.value) %}
+    {% endif %}
+
+    <div class="cms-element-{{ element.type }} emz--{{ config.designSelect.value }}">
+        <div class="emzimageelement--image">
+        {% sw_thumbnails 'emzimageelement-thumbnails' with {
+            media: image,
+            sizes: {
+                'default': '375px'
+            },
+            attributes: {
+                'class': 'emzimageelement-image',
+                'alt': ( config.headline.value ?: ''),
+                'title': ( config.headline.value ?: '')
+            }
+        } %}
+        </div>
+    </div>
+{% endblock %}
+

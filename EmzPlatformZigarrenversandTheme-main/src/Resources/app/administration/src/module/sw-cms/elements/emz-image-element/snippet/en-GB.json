@@ -1,0 +1,9 @@
+{
+    "sw-cms": {
+        "elements": {
+            "emz-image-element": {
+                "label": "Image Element"
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.cms-element-emztextimage-element {
+    position: relative; 
+    margin-bottom: 1.25rem; 
+    display: none;
+    
+    &.emz--design2 {
+        display: block;
+        margin: 0;
+    }
+}
+
+.emz-dynamic-blog-grid {
+    .cms-block-container {
+        padding: 0;
+    }
+
+    .cms-block {
+        .cms-block-container {
+            .cms-block-container-row {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.cms-block-emzimagetextblock {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+}
+
+.emzimageelement--image {
+    height: 13.75rem;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.emz--design2 {
+    .emzimageelement--image {
+        height: auto;
+        img {
+            height: 19.125rem;
+            object-fit: cover;
+        }
+    }
+}
+
+
+@include media-breakpoint-up(md) { 
+    .cms-block-emzimagetextblock {
+        margin: 0;
+    }
+
+    .emz--design2 {
+        .emzimageelement--image {
+            height: auto;
+            img {
+                height: 26.25rem;
+                border-radius: .3125rem;
+                overflow: hidden;
+            }
+        }
+    }
+    .emzimageelement--image {
+        height: 16.875rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .emz-dynamic-blog-grid {
+        .cms-block {
+            .cms-block-container {
+                .cms-block-container-row {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+    
+    .emz--design2 {
+        .emzimageelement--image {
+            img {
+                height: 31.875rem;
+            }
+        }
+    }
+
+    .cms-element-emztextimage-element {
+        display: block;
+    }
+    .emzimageelement--image {
+        height: auto;
+        img {
+            border-radius: .3125rem;
+            object-fit: contain;
+        }
+    }
+}
+
+
+@include media-breakpoint-up(xl) { 
+    .emz--design2 {
+        .emzimageelement--image {
+            img {
+                height: 31.875rem;
+            }
+        }
+    }
+}
